@@ -1,0 +1,9 @@
+cidr_block           = "10.28.0.0/16"
+vpc_name             = "vpc_1"
+public-subnets_cidr  = ["10.28.1.0/24", "10.28.2.0/24", "10.28.3.0/24", "10.28.4.0/24"]
+private-subnets_cidr = ["10.28.10.0/24", "10.28.20.0/24", "10.28.30.0/24", "10.28.40.0/24"]
+azs                  = ["us-east-1a", "us-east-1b", "us-east-1c"]
+imagename            = "ami-0866a3c8686eaeeba"
+env                  = "PROD"
+instance_type        = "t2.micro"
+keyname              = "kbsanu"

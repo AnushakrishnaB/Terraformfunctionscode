@@ -1,0 +1,9 @@
+variable "cidr_block" {}
+variable "vpc_name" {}
+variable "public-subnets_cidr" {}
+variable "private-subnets_cidr" {}
+variable "imagename" {}
+variable "env" {}
+variable "azs" {}
+variable "keyname" {}
+variable "instance_type" {}
