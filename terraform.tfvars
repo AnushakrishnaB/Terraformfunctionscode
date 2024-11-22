@@ -1,9 +1,21 @@
+vpc_name             = "DevOpsB28"
 cidr_block           = "10.28.0.0/16"
-vpc_name             = "vpc_1"
-public-subnets_cidr  = ["10.28.1.0/24", "10.28.2.0/24", "10.28.3.0/24", "10.28.4.0/24"]
-private-subnets_cidr = ["10.28.10.0/24", "10.28.20.0/24", "10.28.30.0/24", "10.28.40.0/24"]
+key_name             = "kbsanu"
+env                  = "DEV"
+public_subnets_cidr  = ["10.28.1.0/24", "10.28.2.0/24", "10.28.3.0/24", "10.28.1.0/24", "10.28.2.0/24", "10.28.3.0/24"]
+private_subnets_cidr = ["10.28.10.0/24", "10.28.20.0/24", "10.28.30.0/24"]
 azs                  = ["us-east-1a", "us-east-1b", "us-east-1c"]
-imagename            = "ami-0866a3c8686eaeeba"
-env                  = "PROD"
+imagename            = "ami-0149b2da6ceec4bb0"
 instance_type        = "t2.micro"
-keyname              = "kbsanu"
+users                = ["anand", "bala", "chandra", "david", "eshwar"]
+users2               = ["elachi", "dragon", "apple", "banana", "cherry"]
+ingress              = [80, 443, 22, 3389, 3306, 1433, 5000, 5001, 5002, 5003]
+egress               = [80, 80, 80, 443, 443, 443, 8080, 8080, 8080, 8443, 8443, 8443]
+sg_description       = "SREE-HARSHA-VEERAPALLI-DEVOPS-CLASS"
+amis = {
+  us-east-2 = "ami-f63b1193" # ubuntu 14.04 LTS  #map function
+  us-west-1 = "ami-824c4ee2" # ubuntu 14.04 LTS
+  us-west-2 = "ami-f2d3638a" # ubuntu 14.04 LTS
+  us-east-1 = "ami-0149b2da6ceec4bb0"
+}
+region = "us-east-1"

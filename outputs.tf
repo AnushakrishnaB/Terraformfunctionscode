@@ -1,4 +1,3 @@
-
 output "vpc_id" {
   value = aws_vpc.default.id
 }
@@ -15,10 +14,12 @@ output "public-subnet-3" {
   value = aws_subnet.public-subnets.2.id
 }
 
+output "all-public-subnets" {
+  value = aws_subnet.public-subnets.*.id
+}
+
 output "all-private-subnets" {
   value = aws_subnet.private-subnets.*.id
 }
 
-output "all-public-subnets" {
-  value = aws_subnet.public-subnets.*.id
-}
+#Terraform output values let you export structured data about your resources. 
