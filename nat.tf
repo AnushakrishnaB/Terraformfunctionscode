@@ -1,5 +1,5 @@
 resource "aws_eip" "nat_eip" {
-  #EIP for NAT Gateway
+  # EIP for NAT Gateway
 }
 
 resource "aws_nat_gateway" "nat_gw" {
@@ -9,8 +9,5 @@ resource "aws_nat_gateway" "nat_gw" {
   tags = {
     Name = "${var.vpc_name}-NAT-GW"
   }
-
-  # To ensure proper ordering, it is recommended to add an explicit dependency
-  # on the Internet Gateway for the VPC.
   depends_on = [aws_internet_gateway.default]
 }
